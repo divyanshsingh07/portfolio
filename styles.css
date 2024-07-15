@@ -208,7 +208,7 @@ body.dark-theme {
     height:150px;
     grid-template-columns: repeat(3,max-content);
     justify-content: center;
-    gap: 2rem 2rem;
+    gap: 1rem 1.5rem;
     align-items: center;
 
 }
