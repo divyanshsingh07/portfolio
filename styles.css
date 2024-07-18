@@ -199,9 +199,10 @@ body.dark-theme {
         margin: 0 auto;
         background-color: var(--body-color);
         box-shadow: 0 4px 20px hsla(207,24%,35%,.1);
-        padding:1rem 2rem 1.5rem 2rem;
+        padding: 0 1rem 1rem 1rem;
         border-radius: 3rem;
         transition: bottom .3s;
+        text-align: center;
     }
 }
 .nav-list{

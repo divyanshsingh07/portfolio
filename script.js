@@ -24,7 +24,18 @@ const linkAction = () => {
 }
 navLinks.forEach(n => n.addEventListener("click", linkAction));
 
+/*=============== HIDE MENU ON SCROLL OR CLICK ===============*/
+const hideMenu = () => {
+    navMenu.classList.remove("show-menu");
+}
 
+window.addEventListener("scroll", hideMenu);
+window.addEventListener("click", (event) => {
+    // Prevent hiding menu if navToggle is clicked
+    if (event.target !== navToggle && !navToggle.contains(event.target)) {
+        hideMenu();
+    }
+});
 
 /*=============== SWIPER PROJECTS ===============*/
 let swiperProjects = new Swiper(".project-container", {
