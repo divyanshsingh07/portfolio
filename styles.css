@@ -538,15 +538,75 @@ position: absolute;
 
 
 
-
-
-
-
 /*=============== PROJECTS ===============*/
+.project-container{
+    overflow: initial;
+}
+.project-content{
+    display: grid;
+    justify-content: center;
+}
+.project-img{
+    width: 250px;
+    border-radius: .75rem;
+    margin-bottom: 1.25rem;
+}
+.project-subtitle{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+.project-title{
+    font-size: var(--h2-font-size);
+    margin: .5rem 0 1.25rem;
+}
+.project-button{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+}
+.project-button i{
+    font-size: 1rem;
+    transition: transform .3s;
+}
+.project-button:hover{
+    transform: translateX(.25rem);
+}
 
 
 /* Swiper class */
+.project-container .swiper-button-next::after,
+.project-container .swiper-button-prev::after{
+    content: '';
+}
+.project-container .swiper-button-next,
+.project-container .swiper-button-prev{
+    width: initial;
+    height: initial;
+    margin:initial;
+    font-size: 2.6rem;
+    color: var(--title-color);
+}
+.project-container .swiper-button-next{
+    right: -1rem;
+    top:8.5rem;
+}
+.project-container .swiper-button-prev{
+    left: -1rem;
+    top:8.5rem;
+}
+.project-container .swiper-pagination-bullets{
+    bottom: -1rem;
+}
+.project-container .swiper-pagination-bullet{
+    background-color: var(--text-color-light);
+    opacity: initial;
+}
+.project-container .swiper-pagination-bullet-active{
+    background-color: var(--title-color);
 
+}
 
 /*=============== TESTIMONIAL ===============*/
 
