@@ -282,6 +282,7 @@ body.dark-theme {
 }
 .home-profile img{
     width: 150px;
+    text-align: center;
 }
 .home-shape-wave,
 .home-shape-circle{
@@ -322,6 +323,7 @@ position: absolute;
     font-size: var(--smaller-font-size);
     font-weight: 400;
     margin-bottom: 1rem;
+    text-align: center;
 }
 .home-description,
 .home-info-numbers{
@@ -329,11 +331,13 @@ position: absolute;
     color: var(--title-color);
 }
 .home-description{
-    padding-right: 4rem;
+    text-align: center;
+    width: 100%;
 }
 .home-info-numbers{
     font-size: var(--h1-font-size);
     font-family: var(--font-semi-bold);
+    text-align: center;
 
 }
 
@@ -374,6 +378,7 @@ position: absolute;
     place-items: center;
     border-radius: 3rem;
     margin-bottom: 1rem;
+    margin-left: -7px;
 }
 .skill-blob img{
     width: 50px;
@@ -635,9 +640,39 @@ position: absolute;
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 320px) {
+    .skill-info{
+        grid-template-columns: repeat(2,1fr);
+        gap: 2.5rem 3rem;
+    }
+    .nav-list{
+        height:130px;
+        grid-template-columns: repeat(3,max-content);
+        justify-content: center;
+        gap: .5rem .5rem;
+        align-items: center;
+
+    }
+
+
+
+}
 
 
 /* For medium devices */
+@media screen and (min-width: 880px) {
+    .skill-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem 2.5rem;
+    }
 
+    .nav-list {
+        height: 130px;
+        grid-template-columns: repeat(3, max-content);
+        justify-content: center;
+        gap: 2rem 5.5rem;
+        align-items: center;
+    }
+}
 
 /* For large devices */
