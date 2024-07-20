@@ -64,6 +64,28 @@ let swiperProjects = new Swiper(".project-container", {
 
 
 /*=============== EMAIL JS ===============*/
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            document.getElementById('result').innerHTML = '<p>Thank you for your message!</p>';
+            this.reset();
+        } else {
+            response.json().then(data => {
+                document.getElementById('result').innerHTML = '<p>' + data.message + '</p>';
+            });
+        }
+    }).catch(error => {
+        document.getElementById('result').innerHTML = '<p>There was an error sending your message.</p>';
+    });
+});
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/

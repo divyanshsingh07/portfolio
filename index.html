@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="swiper-bundle.min.css">
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="styles.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <title> Portfolio website Divyansh Singh</title>
 </head>
@@ -436,12 +437,78 @@
 
     <!--==================== CONTACT ====================-->
     <section class="contact section" id="contact">
+        <h2 class="section__title">Contact Me</h2>
+        <span class="section__subtitle">Get In Touch</span>
+        <div class="contact-container container grid ">
+            <div class="contact-content">
+                <h3 class="contact-title">
+                    <i class="ri-contacts-line"></i>
+                    Talk To Me
+                </h3>
+                <div class="contact-info">
+                    <div class="contact-data">
+                        <span class="contact-data-title">E.mail :</span>
+                        <span class="contact-data-info">arsh8004105292@gmail.com</span>
+                    </div>
+
+                    <div class="contact-data">
+                        <span class="contact-data-title">Whats app</span>
+                        <span class="contact-data-info">9517593294</span>
+                        <a href="https://wa.me/+919517593294" class="contact-buttoni">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-content">
+                <h3 class="contact-title">
+                    <i class="ri-send-plane-line"></i>
+                    Send message to contact me
+                </h3>
+                <main class="row">
+                    <section class="col right">
+                        <form id="contact-form" class="messageForm" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="6433f539-132d-409f-a95a-db4087885ec4">
+                            <div class="inputGroup halfWidth">
+                                <input type="text" id="name" name="name" required="required">
+                                <label>Your Name</label>
+                            </div>
+                            <div class="inputGroup halfWidth">
+                                <input type="email" id="email" name="email" required="required">
+                                <label>Email</label>
+                            </div>
+                            <div class="inputGroup fullWidth">
+                                <input type="text" id="subject" name="subject" required="required">
+                                <label>Subject</label>
+                            </div>
+                            <div class="inputGroup fullWidth">
+                                <textarea id="message" name="message" required="required"></textarea>
+                                <label>Say Something</label>
+                            </div>
+                            <div class="inputGroup fullWidth">
+                                <button type="submit" class="btn">Send Message</button>
+                                <i class="ri-send-plane-fill"></i>
+                            </div>
+                        </form>
+                        <div id="result"></div>
+                    </section>
+                </main>
+            </div>
+
+
+
+        </div>
+
 
     </section>
 </main>
 
 <!--==================== FOOTER ====================-->
 <footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 .All rights reserved.</p>
+    </div>
 
 </footer>
 
@@ -460,5 +527,7 @@
 
 <!--=============== MAIN JS ===============-->
 <script src="script.js"></script>
+
+
 </body>
 </html>
