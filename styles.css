@@ -10,7 +10,7 @@
     --first-color: hsl(207, 65%, 65%);
     --title-color: hsl(207, 4%, 16%);
     --text-color: hsl(207, 4%, 28%);
-    --text-color-light: hsl(207, 4%, 56%);
+    --text-color-light: hsl(180, 1%, 19%);
     --body-color: hsl(207, 4%, 99%);
     --container-color: hsl(207, 4%, 95%);
 
@@ -44,7 +44,7 @@
 }
 
 /* Responsive typography */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1424px) {
     :root {
         --biggest-font-size: 3rem;
         --h1-font-size: 2.25rem;
@@ -631,7 +631,7 @@ position: absolute;
     column-gap: .5rem;
     font-size: var(--font-medium);
     font-weight: var(--font-semi-bold);
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 .contact-title i{
     font-size:1rem;
@@ -648,85 +648,78 @@ position: absolute;
     padding: .3rem;
     text-align: center;
 }
-.contact-buttoni{
+.contact-button-i{
 
     font-size:1.3rem;
 }
-.contact-buttoni:hover{
+.contact-button-i:hover{
     color: #25D366;
 }
-.btn{
-    height: 2rem;
-    width: 8rem;
-    border-radius: 2rem;
-    margin-left: 6rem;
-}
-.btn:hover{
-    transition:.3s;
-    transform: translateY(-.1rem);
 
-}
-
-
-.container .row{
+.contact-form {
     display: flex;
-    justify-content: space-between;
-}
-
-
-.row section.right .messageForm{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 30px;
-}
-.row section.right .inputGroup{
-    margin: 18px 0px;
+    flex-direction: column;
+    row-gap: 2rem;
     position: relative;
 }
-.messageForm .halfWidth{
-    flex-basis: 48%;
-}
-.messageForm .fullWidth{
-    flex-basis: 100%;
-}
-.messageForm input, .messageForm textarea{
-    width: 100%;
-    font-size: 18px;
-    padding: 2px 0px;
 
+.contact-form-div {
+    position: relative;
+    height: 4rem;
+}
 
-    border: none;
-    border-bottom: 2px solid #666;
-    outline: none;
-}
-.messageForm textarea{
-    resize: none;
-    height: auto;
-    display: block;
-}
-textarea::-webkit-scrollbar{
-    width: 5px;
-}
-.inputGroup label{
+.contact-form-input {
     position: absolute;
+    top: 0;
     left: 0;
-    bottom: 4px;
-    color: #888;
-    font-size: 18px;
-    transition: 0.4s;
-    pointer-events: none;
-}
-.inputGroup:nth-child(4) label{
-    top: 2px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--text-color-light);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    font-size: var(--normal-font-size);
+    font-family: var(--title-font);
+    color: var(--title-color);
+    background: none;
+    outline: none;
+    z-index: 1;
+
 }
 
-.inputGroup input:focus ~ label, .inputGroup textarea:focus ~ label,
-.inputGroup input:valid ~ label, .inputGroup textarea:valid ~ label
-{
-    transform: translateY(-30px);
-    font-size: 16px;
+.contact-form-tag {
+    position: absolute;
+    top: -.65rem;
+    left: 1.25rem;
+    z-index: 10;
+    background-color: var(--body-color);
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    padding: .35rem;
+    border-radius: 4rem;
 }
+.contact-form-area{
+    height: 10rem;
+}
+.contact-button{
+    height: 3rem;
+    width: 6rem;
+    border-radius: 2.5rem;
+    font-size: 1rem;
+    align-self: center;
+    font-weight: var(--font-semi-bold);
+    background: none;
+}
+.contact-button:hover{
+    transition: 1s;
+    transform: translateY(-.15rem);
+}
+.contact-button i{
+
+}
+
+
+
 
 
 @media(max-width: 1100px){
@@ -747,6 +740,12 @@ textarea::-webkit-scrollbar{
 
 
 /* Status color */
+.color-red{
+    color: red;
+}
+.color-blue{
+    color: #047fd7;
+}
 
 
 /*=============== FOOTER ===============*/

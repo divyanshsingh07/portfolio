@@ -64,28 +64,44 @@ let swiperProjects = new Swiper(".project-container", {
 
 
 /*=============== EMAIL JS ===============*/
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const formData = new FormData(this);
-    fetch(this.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        if (response.ok) {
-            document.getElementById('result').innerHTML = '<p>Thank you for your message!</p>';
-            this.reset();
-        } else {
-            response.json().then(data => {
-                document.getElementById('result').innerHTML = '<p>' + data.message + '</p>';
+const contactForm = document.getElementById("contact-form"),
+    contactName = document.getElementById("contact-name"),
+    contactEmail = document.getElementById("contact-email"),
+    contactProject = document.getElementById("contact-project"),
+    contactMsg = document.getElementById("contact-msg");
+
+const SendEmail = (e) => {
+    e.preventDefault();
+    if (contactName.value === "" || contactEmail.value === "" || contactProject.value === "") {
+        contactMsg.classList.remove("color-blue");
+        contactMsg.classList.add("color-red");
+        contactMsg.textContent = 'Write all input fields 📩';
+    } else {
+        const templateParams = {
+            name: contactName.value,
+            email: contactEmail.value,
+            project: contactProject.value,
+        };
+
+        emailjs.send('service_yguuf95', 'template_tjr3r1c', templateParams, 'ykhAovYoXk1NumHjQ')
+            .then((response) => {
+                contactMsg.classList.remove("color-red");
+                contactMsg.classList.add("color-blue");
+                contactMsg.textContent = 'Message sent successfully 📩';
+                contactForm.reset();
+            }, (error) => {
+                contactMsg.classList.remove("color-blue");
+                contactMsg.classList.add("color-red");
+                contactMsg.textContent = 'Failed to send the message. Please try again later.';
             });
-        }
-    }).catch(error => {
-        document.getElementById('result').innerHTML = '<p>There was an error sending your message.</p>';
-    });
-});
+    }
+}
+
+contactForm.addEventListener("Submit", SendEmail);
+
+
+
+
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
@@ -101,3 +117,5 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+
+

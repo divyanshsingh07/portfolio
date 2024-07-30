@@ -454,7 +454,7 @@
                     <div class="contact-data">
                         <span class="contact-data-title">Whats app</span>
                         <span class="contact-data-info">9517593294</span>
-                        <a href="https://wa.me/+919517593294" class="contact-buttoni">
+                        <a href="https://wa.me/+919517593294" class="contact-button-i">
                             <i class="ri-whatsapp-line"></i>
                         </a>
                     </div>
@@ -466,40 +466,27 @@
                     <i class="ri-send-plane-line"></i>
                     Send message to contact me
                 </h3>
-                <main class="row">
-                    <section class="col right">
-                        <form id="contact-form" class="messageForm" action="https://api.web3forms.com/submit" method="POST">
-                            <input type="hidden" name="access_key" value="6433f539-132d-409f-a95a-db4087885ec4">
-                            <div class="inputGroup halfWidth">
-                                <input type="text" id="name" name="name" required="required">
-                                <label>Your Name</label>
-                            </div>
-                            <div class="inputGroup halfWidth">
-                                <input type="email" id="email" name="email" required="required">
-                                <label>Email</label>
-                            </div>
-                            <div class="inputGroup fullWidth">
-                                <input type="text" id="subject" name="subject" required="required">
-                                <label>Subject</label>
-                            </div>
-                            <div class="inputGroup fullWidth">
-                                <textarea id="message" name="message" required="required"></textarea>
-                                <label>Say Something</label>
-                            </div>
-                            <div class="inputGroup fullWidth">
-                                <button type="submit" class="btn">Send Message</button>
-                                <i class="ri-send-plane-fill"></i>
-                            </div>
-                        </form>
-                        <div id="result"></div>
-                    </section>
-                </main>
+                <form action="https://formspree.io/f/mjkbwkqp" method="POST"  class="contact-form" id="contact-form">
+                    <div class="contact-form-div">
+                        <label class="contact-form-tag">Name</label>
+                            <input type="text" name="user-name" required placeholder="Name" class="contact-form-input" id="contact-name">
+
+                    </div>
+                    <div class="contact-form-div">
+                        <label class="contact-form-tag">Email-Id</label>
+                        <input type="text" name="user-email" required placeholder="Email-id" class="contact-form-input" id="contact-emil">
+
+                    </div>
+                    <div class="contact-form-div contact-form-area">
+                        <label for="contact-project" class="contact-form-tag">Project Info</label>
+                        <textarea name="user-project" class="contact-form-input" placeholder="Write your project" id="contact-project"></textarea>
+                    </div>
+                    <p class="contact-msg" id="contact-msg">Message</p>
+                    <button type="Submit" class="contact-button">Submit <i class="ri-mail-send-line"></i></button>
+
+                </form>
             </div>
-
-
-
         </div>
-
 
     </section>
 </main>
@@ -523,6 +510,7 @@
 <script src="swiper-bundle.min.js"></script>
 
 <!--=============== EMAIL JS ===============-->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 
 <!--=============== MAIN JS ===============-->

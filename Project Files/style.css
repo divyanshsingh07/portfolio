@@ -39,26 +39,17 @@ body{
 }
 .messageForm input, .messageForm textarea{
 	width: 100%;
-	font-size: 18px;
-	padding: 2px 0px;
-
-
+	font-size: 14px;
 	border: none;
 	border-bottom: 2px solid #666;
 	outline: none;
 }
-.messageForm textarea{
-	resize: none;
-	height: 220px;
-	display: block;
-}
-textarea::-webkit-scrollbar{
-	width: 5px;
-}
+
+
 .inputGroup label{
 	position: absolute;
 	left: 0;
-	bottom: 4px;
+	bottom: 1px;
 	color: #888;
 	font-size: 18px;
 	transition: 0.4s;
@@ -70,8 +61,8 @@ textarea::-webkit-scrollbar{
 .inputGroup input:focus ~ label, .inputGroup textarea:focus ~ label,
 .inputGroup input:valid ~ label, .inputGroup textarea:valid ~ label
 {
-	transform: translateY(-30px);
-	font-size: 16px;
+	transform: translateY(40px);
+	font-size: 18px;
 }
 
 
@@ -86,6 +77,6 @@ textarea::-webkit-scrollbar{
 	}
 	.row section.left, .row section.right{
 		flex-basis: 100%;
-		margin: 0px;
+		margin: 0;
 	}
 }
