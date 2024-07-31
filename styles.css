@@ -208,10 +208,11 @@ body.dark-theme {
         transition: bottom .3s;
         text-align: center;
     }
-    .home-big{
-        display: none;
-    }
+
+
 }
+
+
 .nav-list{
     height:150px;
     grid-template-columns: repeat(3,max-content);
@@ -256,6 +257,21 @@ body.dark-theme {
 
 
 /*=============== HOME ===============*/
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle {
+    text-align: center;
+}
+
+.home-profile img {
+    display: block;
+    margin: 0 auto;
+}
+
 .home-container{
     row-gap: 4rem;
     padding: 2rem;
@@ -268,7 +284,7 @@ body.dark-theme {
 
     font-size: var(--biggest-font-size);
     letter-spacing: .3px;
-    margin-bottom: .5rem;
+    margin-top: 1.5rem;
 }
 .home-bold{
     position: relative;
@@ -279,6 +295,7 @@ body.dark-theme {
     justify-self: center;
     border-radius:6.25rem;
     place-items: center;
+    margin-left: 1.2rem;
 }
 .home-profile{
     width: 180px;
@@ -288,11 +305,16 @@ body.dark-theme {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-content: center;
+    margin-top: 1.5rem;
+    margin-left: .5rem;
 }
 .home-profile img{
     width: 150px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+
 }
 .home-shape-wave,
 .home-shape-circle{
@@ -1129,8 +1151,9 @@ body .dark-theme {
         font-family:"Bodoni 72 Oldstyle";
         font-size: 1.2rem;
     }
-
-
+    .nav-link hide{
+        display: none;
+    }
 
 
 }
