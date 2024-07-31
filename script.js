@@ -111,6 +111,41 @@ contactForm.addEventListener("Submit", SendEmail);
 
 
 /*=============== DARK LIGHT THEME ===============*/
+/*=============== DARK LIGHT THEME ===============*/
+const themeButton = document.getElementById('theme-button');
+const darkTheme = 'dark-theme';
+const iconThemeMoon = 'ri-moon-line';
+const iconThemeSun = 'ri-sun-line';
+
+// Previously selected theme (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
+// Get the current theme and icon
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () => themeButton.classList.contains(iconThemeSun) ? iconThemeSun : iconThemeMoon;
+
+// Apply the previously selected theme and icon
+if (selectedTheme) {
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+    themeButton.classList.remove(iconThemeMoon, iconThemeSun);
+    themeButton.classList.add(selectedIcon === 'ri-sun-line' ? iconThemeSun : iconThemeMoon);
+}
+
+// Toggle theme and icon on button click
+themeButton.addEventListener('click', () => {
+    document.body.classList.toggle(darkTheme);
+    if (getCurrentTheme() === 'dark') {
+        themeButton.classList.remove(iconThemeMoon);
+        themeButton.classList.add(iconThemeSun);
+    } else {
+        themeButton.classList.remove(iconThemeSun);
+        themeButton.classList.add(iconThemeMoon);
+    }
+    localStorage.setItem('selected-theme', getCurrentTheme());
+    localStorage.setItem('selected-icon', getCurrentIcon());
+});
+
 
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/

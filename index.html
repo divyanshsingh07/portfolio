@@ -18,18 +18,19 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <title> Portfolio website Divyansh Singh</title>
+    <link rel="stylesheet" href="Project Files/style.css">
 </head>
 <body>
 <!--==================== HEADER ====================-->
 <header class="header" id="header">
     <nav class="nav container">
         <a href="#" class="nav_logo">
-            Divyansh Singh
+           <span>Divyansh Singh</span>
         </a>
         <div class="nav-menu" id="nav-menu">
             <ul class="nav-list grid">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link">
+                    <a href="#home" class="nav-link ">
                         <i class="ri-home-5-line"> Home</i>
                     </a>
 
@@ -77,8 +78,8 @@
             </div>
         </div>
         <div class="nav-button" >
-<!--            <i class="ri-moon-line change-theme" id="theme-button"></i>-->
-            <!-- /#nav-toggle.nav--toggle -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+<!--             /#nav-toggle.nav&#45;&#45;toggle -->
             <div class="nav--toggle" id="nav-toggle">
                 <i class="ri-menu-4-line"></i>
             </div>
@@ -93,11 +94,105 @@
 
 <!--==================== MAIN ====================-->
 <main class="main">
+    <section class="home-big section " id="home">
+
+        <div class="home-container container grid section__border">
+            <div class="left">
+                <div class="home-info">
+                    <h3 class="home-title">
+                        BIOGRAPHY
+                    </h3>
+                    <p class="home-description">
+                        I'm Divyansh Singh, a Full Stack Developer from India. I specialize in creating dynamic, responsive web applications with a blend of frontend and backend technologies. Explore my portfolio to see my projects and skills in action.
+                    </p>
+                </div>
+                <div class="home-info">
+                    <h3 class="home-title">
+                        CONTACT
+                    </h3>
+                    <p class="home-description">
+                        arsh8004105292@gmail.com<br>
+                        +91 9517593294
+                    </p>
+                </div>
+
+                <div class="home-info">
+                    <h3 class="home-title">
+                        SERVICES
+                    </h3>
+                    <p class="home-description">
+                        Full Stack <br>
+                        Website Design <br>
+                        Portfolio<br>
+
+                    </p>
+                </div>
+            </div>
+            <div class="middle">
+                <h1 class="home-data grid">
+                    <span> Hi, I'm Divyansh Singh <br> Full Stack Developer <br> from India.<br></span>
+                </h1>
+                <div class="home-bold">
+                    <div class="home-profile">
+                        <img src="IMG_20240715_000025.png" >
+                    </div>
+                    <img src="shape-wawes.svg" class="home-shape-wave">
+                    <img src="shape-circle.svg"  class="home-shape-circle">
+                </div>
+
+                <ul class="home-social">
+                    <a href="https://www.linkedin.com/in/divyansh-singh-a33976255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="home-social-link">
+                        <i class="ri-linkedin-box-line"></i>
+                    </a>
+                    <a href="https://github.com/divyanshsingh07" target="_blank" class="home-social-link">
+                        <i class="ri-github-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/arshthakur07/" target="_blank" class="home-social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+
+                </ul>
+            </div>
+
+            <div class="right">
+                <div class="home-info">
+                    <div>
+                        <h3 class="home-title">
+                            YEAR OF EXPERIENCE
+                        </h3>
+                        <p class="home-info-numbers">
+                            02
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="home-title">
+                            PROJECT COMPLETED
+
+                        </h3>
+                        <p class="home-info-numbers">
+                            04
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="home-title">
+                            WORK WITH CLINT
+
+                        </h3>
+                        <p class="home-info-numbers">
+                            02
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
     <!--==================== HOME ====================-->
     <section class="home section" id="home">
+
         <div class="home-container container grid section__border">
             <h1 class="home-data grid">
-                Hi, I'm Divyansh Singh <br> Full Stack Developer <br> from India.<br>
+               <span> Hi, I'm Divyansh Singh <br> Full Stack Developer <br> from India.<br></span>
              </h1>
             <div class="home-bold grid">
                 <div class="home-profile">
@@ -436,10 +531,10 @@
     </section>
 
     <!--==================== CONTACT ====================-->
-    <section class="contact section" id="contact">
+    <section class="contact section container grid section__border " id="contact" >
         <h2 class="section__title">Contact Me</h2>
         <span class="section__subtitle">Get In Touch</span>
-        <div class="contact-container container grid ">
+        <div class="contact-container ">
             <div class="contact-content">
                 <h3 class="contact-title">
                     <i class="ri-contacts-line"></i>
@@ -466,7 +561,7 @@
                     <i class="ri-send-plane-line"></i>
                     Send message to contact me
                 </h3>
-                <form action="https://formspree.io/f/mjkbwkqp" method="POST"  class="contact-form" id="contact-form">
+                <form action="https://formspree.io/f/mjkbwkqp" method="POST"  class="contact-form section__border" id="contact-form">
                     <div class="contact-form-div">
                         <label class="contact-form-tag">Name</label>
                             <input type="text" name="user-name" required placeholder="Name" class="contact-form-input" id="contact-name">
@@ -493,9 +588,39 @@
 
 <!--==================== FOOTER ====================-->
 <footer class="footer">
+   <div class="footer-container container">
+       <h1 class="footer-title">
+          <span>Divyansh Singh</span>
+       </h1>
+       <span>Full stack developer</span>
+       <ul class="footer-list">
+           <li>
+               <a href="#home" class="footer-link">Home</a>
+           </li>
+           <li>
+               <a href="#skills" class="footer-link">Skills</a>
+           </li>
+           <li>
+               <a href="#projects" class="footer-link">Projects</a>
+           </li>
+       </ul>
+       <ul class="home-social">
+           <a href="https://www.linkedin.com/in/divyansh-singh-a33976255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="home-social-link">
+               <i class="ri-linkedin-box-line"></i>
+           </a>
+           <a href="https://github.com/divyanshsingh07" target="_blank" class="home-social-link">
+               <i class="ri-github-fill"></i>
+           </a>
+           <a href="https://www.instagram.com/arshthakur07/" target="_blank" class="home-social-link">
+               <i class="ri-instagram-line"></i>
+           </a>
+
+       </ul>
+   </div>
     <div class="footer-content">
         <p>&copy; 2024 .All rights reserved.</p>
     </div>
+
 
 </footer>
 
