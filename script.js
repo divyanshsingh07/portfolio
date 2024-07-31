@@ -152,5 +152,26 @@ themeButton.addEventListener('click', () => {
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    // reset: true /* Uncomment this line if you want the animations to repeat */
+});
+
+sr.reveal('.home-data');
+sr.reveal('.home-info div', { delay: 200, origin: 'bottom', interval: 100 });
+sr.reveal('.skills-content:nth-child(1)', { origin: 'left' });
+sr.reveal('.skills-content:nth-child(2)', { origin: 'left', delay: 100 });
+sr.reveal('.home-data');
+sr.reveal('.home-info', { delay: 200, origin: 'bottom', interval: 80 });
 
 
+sr.reveal('.skill-title', { origin: 'right', interval: 70 });
+sr.reveal('.skill-data', { origin: 'left', interval: 70 });
+
+
+
+sr.reveal('.qualification-content', { origin: 'left', interval: 90 });
+sr.reveal('.qualification-title', { origin: 'right', delay: 90 });
