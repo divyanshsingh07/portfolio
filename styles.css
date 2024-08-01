@@ -10,7 +10,7 @@
     --first-color: hsl(207, 65%, 65%);
     --title-color: hsl(207, 4%, 16%);
     --text-color: hsl(207, 4%, 28%);
-    --text-color-light: hsl(180, 1%, 73%);
+    --text-color-light: hsl(0, 1%, 18%);
     --body-color: hsl(207, 4%, 99%);
     --container-color: hsl(207, 4%, 95%);
 
@@ -132,10 +132,6 @@ body.dark-theme {
     padding-block: 2.5rem;
 }
 
-.section__border {
-    border-bottom: 1px solid var(--title-color);
-    padding-bottom: 3.5rem;
-}
 
 .section__title,
 .section__subtitle {
@@ -145,14 +141,18 @@ body.dark-theme {
 .section__title {
     font-size: var(--h1-font-size);
     font-weight: var(--font-semi-bold);
-    margin-bottom: .25rem;
+    margin-top: 1rem;
+    position: relative;
+    top: 25rem;
+
+
 }
 
 .section__subtitle {
     display: block;
     font-size: var(--small-font-size);
     color: var(--text-color-light);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .main {
@@ -214,7 +214,7 @@ body.dark-theme {
 
 
 .nav-list{
-    height:150px;
+    height:80px;
     grid-template-columns: repeat(3,max-content);
     justify-content: center;
     gap: 1rem 1.5rem;
@@ -264,7 +264,10 @@ body.dark-theme {
 }
 
 .middle {
+    position: absolute;
     text-align: center;
+
+
 }
 
 .home-profile img {
@@ -375,6 +378,8 @@ position: absolute;
 
 /*=============== SKILLS ===============*/
 .skills-container{
+    position: relative;
+    top: 25rem;
     row-gap: 3.5rem;
 }
 .skill-title{
@@ -453,6 +458,10 @@ position: absolute;
 /*=============== QUALIFICATION ===============*/
 .qualification{
     position: relative;
+    top:23rem;
+}
+.section__title1{
+   text-align: center;
 }
 .qualification-container{
     row-gap: 3.5rem;
@@ -496,6 +505,14 @@ position: absolute;
 
 
 /*=============== SERVICES ===============*/
+.section__title4{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.services{
+    position: relative;
+    top:20rem;
+}
 .service-container{
     display: flex;
     flex-direction: row;
@@ -577,7 +594,15 @@ position: absolute;
 
 
 /*=============== PROJECTS ===============*/
+.section__title2{
+    position: relative;
+    top:17rem;
+    text-align: center;
+}
+
 .project-container{
+    position: relative;
+    top:18rem;
     overflow: initial;
 
 }
@@ -654,8 +679,16 @@ position: absolute;
 
 
 /*=============== CONTACT ===============*/
+.section__title3{
+    position: relative;
+    left: 8.5rem;
+}
+.contact{
+    position: relative;
+    top: 10rem;
+}
 .contact-container{
-    row-gap: 3.5rem;
+    row-gap: 2.5rem;
 }
 .contact-title{
     display: flex;
@@ -744,13 +777,7 @@ position: absolute;
     background: none;
     color: var(--text-color-light);
 }
-.contact-button:hover{
-    transition: 1s;
-    transform: translateY(-.15rem);
-}
-.contact-button i{
 
-}
 
 
 
@@ -769,6 +796,10 @@ position: absolute;
         flex-basis: 100%;
         margin: 0px;
     }
+}
+.left,.right{
+    position: relative;
+    top: 30rem;
 }
 
 
@@ -805,6 +836,8 @@ position: absolute;
     padding-bottom: 12rem;
 
 }
+
+
 
 
 
@@ -873,9 +906,9 @@ body .dark-theme {
 
     .home-container{
         display: grid;
-        padding: 2rem;
-        padding-top: 14.5rem;
+        padding-top: 8rem;
         grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 0;
     }
 
     .home-data{
@@ -977,6 +1010,8 @@ body .dark-theme {
     }
 
     .middle {
+        position: relative;
+        left:2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1115,6 +1150,7 @@ body .dark-theme {
         border: none;
     }
     .header{
+
         top: 0;
         bottom: initial;
         background-color: var(--body-color);
@@ -1148,12 +1184,55 @@ body .dark-theme {
     }
     .nav_logo{
         font-weight:400;
-        font-family:"Bodoni 72 Oldstyle";
+        font-family: sans-serif;
         font-size: 1.2rem;
     }
     .nav-link hide{
         display: none;
     }
+    .left{
+        position: relative;
+        top: 1rem;
+    }
+    .right{
+        position: relative;
+        top: 1rem;
+    }
+    .skills-container{
+        position: relative;
+        top: 1rem;
+        row-gap: 3.5rem;
+    }
+    .section__title3{
+        position: relative;
+        left: 37rem;
+        margin-top: 5rem;
 
+
+    }
+    .section__title{
+        position: relative;
+        top: 1rem;
+
+    }
+    .section__title1{
+        align-items: center;
+        text-align: center;
+
+    }
+    .section__title2,.section__title4{
+       text-align: center;
+        margin-top: 2rem;
+
+
+
+    }
+    .contact-content{
+        justify-content: center;
+        align-content: center;
+        font-size: 1.5rem;
+        margin-top: -2rem;
+
+    }
 
 }

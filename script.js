@@ -38,28 +38,42 @@ window.addEventListener("click", (event) => {
 });
 
 /*=============== SWIPER PROJECTS ===============*/
-let swiperProjects = new Swiper(".project-container", {
-
-    loop: true,
-    spaceBetween: 24,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-    },
-    mousewheel: true,
-    keyboard: true,
-    breakpoints: {
-        1200: {
-            slidesPerView: 2,
-            spaceBetween: -56,
+// Function to initialize Swiper
+function initializeSwiper() {
+    new Swiper(".project-container", {
+        loop: true,
+        spaceBetween: 24,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+        breakpoints: {
+            1200: {
+                slidesPerView: 2,
+                spaceBetween: -56,
+            },
+        },
+    });
+}
 
+// Function to check screen width and initialize Swiper
+function checkDevice() {
+    if (window.innerWidth <= 768) { // Define the screen width for phones
+        initializeSwiper();
+    }
+}
 
-    },
-});
+// Check the device type on window load
+window.addEventListener('load', checkDevice);
+
+// Optionally, re-check on window resize
+window.addEventListener('resize', checkDevice);
+
 /*=============== SWIPER TESTIMONIAL ===============*/
 
 
