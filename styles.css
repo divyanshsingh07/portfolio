@@ -10,7 +10,7 @@
     --first-color: hsl(207, 65%, 65%);
     --title-color: hsl(207, 4%, 16%);
     --text-color: hsl(207, 4%, 28%);
-    --text-color-light: hsl(0, 2%, 49%);
+    --text-color-light: hsl(0, 0%, 1%);
     --body-color: hsl(207, 4%, 99%);
     --container-color: hsl(207, 4%, 95%);
 
@@ -687,6 +687,7 @@ position: absolute;
 .contact-container{
     row-gap: 2.5rem;
     margin-bottom: 2rem;
+
 }
 .contact-title{
     display: flex;
@@ -777,7 +778,23 @@ position: absolute;
     color: var(--text-color-light);
 }
 
+.contact-content{
+    position: relative;
+    top: 8rem;
+    justify-content: center;
+    align-content: center;
+    font-size: 1rem;
+    padding-bottom: 10rem;
 
+}
+.section__title3{
+    text-align: center;
+    margin-right: 17rem;
+    margin-top: 14rem;
+    font-size: 1.25rem;
+
+
+}
 
 
 
@@ -896,6 +913,14 @@ body .dark-theme {
     }
 
 
+
+}
+
+.ri-eye-line{
+    position: relative;
+    left: 4rem;
+    top :5rem;
+    color: var(--text-color-light);
 
 }
 
@@ -1107,6 +1132,7 @@ body .dark-theme {
         background-color: var(--title-color);
     }
     .contact-container{
+
         display: grid;
 
         grid-template-columns: 1fr 1.5fr;
@@ -1138,6 +1164,7 @@ body .dark-theme {
         transition: all 0.5s;
     }
      .qualification-container{
+
          display: grid;
          grid-template-columns: repeat(2,max-content);
          justify-content: center;
@@ -1149,7 +1176,7 @@ body .dark-theme {
          row-gap: 5rem;
      }
     .contact-container{
-        border: none;
+
         padding-bottom: 10rem;
     }
     .header{
@@ -1209,6 +1236,7 @@ body .dark-theme {
     .section__title3{
         text-align: center;
         margin-right: 17rem;
+        margin-top: 14rem;
 
 
     }
@@ -1228,11 +1256,13 @@ body .dark-theme {
 
     }
     .contact-content{
+        position: relative;
+        top: 8rem;
         justify-content: center;
         align-content: center;
         font-size: 1.5rem;
-        margin-top: -2rem;
         padding-bottom: 10rem;
+        border-bottom: 2px solid var(--text-color-light);
 
     }
     .footer-content {
