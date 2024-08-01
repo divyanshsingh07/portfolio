@@ -39,19 +39,27 @@ window.addEventListener("click", (event) => {
 
 /*=============== SWIPER PROJECTS ===============*/
 // Function to initialize Swiper
+let swiperInstance;
+
 function initializeSwiper() {
-    new Swiper(".project-container", {
+    const isMobile = window.innerWidth <= 768; // Define the screen width for mobile devices
+
+    if (swiperInstance) {
+        swiperInstance.destroy(true, true); // Destroy previous instance if it exists
+    }
+
+    swiperInstance = new Swiper(".project-container", {
         loop: true,
         spaceBetween: 24,
-        navigation: {
+        navigation: !isMobile ? {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
-        },
+        } : false,
         pagination: {
             el: ".swiper-pagination",
         },
-        mousewheel: true,
-        keyboard: true,
+        mousewheel: isMobile,
+        keyboard: isMobile,
         breakpoints: {
             1200: {
                 slidesPerView: 2,
@@ -61,18 +69,12 @@ function initializeSwiper() {
     });
 }
 
-// Function to check screen width and initialize Swiper
-function checkDevice() {
-    if (window.innerWidth <= 768) { // Define the screen width for phones
-        initializeSwiper();
-    }
-}
+// Initialize Swiper on window load
+window.addEventListener('load', initializeSwiper);
 
-// Check the device type on window load
-window.addEventListener('load', checkDevice);
+// Reinitialize Swiper on window resize
+window.addEventListener('resize', initializeSwiper);
 
-// Optionally, re-check on window resize
-window.addEventListener('resize', checkDevice);
 
 /*=============== SWIPER TESTIMONIAL ===============*/
 
