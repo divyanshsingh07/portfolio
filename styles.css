@@ -889,7 +889,11 @@ position: absolute;
     column-gap: 1.5rem;
 
 }
+.services{
+    position: relative;
+    top:22rem;
 
+}
 .change-theme{
     font-size: 1.25rem;
     color: var(--title-color);
@@ -1136,9 +1140,13 @@ body .dark-theme {
         left: -1rem;
         top: 8.5rem;
     }
-
+    .section__title2{
+        position: relative;
+        top: 0;
+        text-align: center;
+    }
     .project-container .swiper-pagination-bullets {
-        bottom: -1rem;
+        bottom: 1rem;
     }
 
     .project-container .swiper-pagination-bullet {
@@ -1194,8 +1202,13 @@ body .dark-theme {
          row-gap: 5rem;
      }
     .contact-container{
-
-        padding-bottom: 10rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--text-color-light);
+       
+    }
+    .section__title3{
+        position: relative;
+        top: 0;
     }
     .header{
 
@@ -1304,6 +1317,14 @@ body .dark-theme {
         top:2rem;
         border-bottom: 1px solid var(--text-color-light);
     }
+    .project-container{
+        position: relative;
+        top:2rem;
+        border-bottom: 1px solid var(--text-color-light);
+
+
+    }
+
 
 }
 @media screen and (max-width: 320px) {
