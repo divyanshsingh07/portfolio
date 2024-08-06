@@ -889,6 +889,11 @@ position: absolute;
     column-gap: 1.5rem;
 
 }
+.services{
+    position: relative;
+    top:2rem;
+
+}
 .change-theme{
     font-size: 1.25rem;
     color: var(--title-color);
@@ -1307,8 +1312,8 @@ body .dark-theme {
         justify-content: center;
         gap: .75rem 1rem;
         align-items: center;
-
     }
+
 
 
 }
