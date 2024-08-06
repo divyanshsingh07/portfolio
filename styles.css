@@ -261,6 +261,8 @@ body.dark-theme {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: 1 solid var(--title-color);
+
 }
 
 .middle {
@@ -284,11 +286,12 @@ body.dark-theme {
     text-align: center;
 }
 .home-title{
-
     font-size: var(--biggest-font-size);
     letter-spacing: .3px;
     margin-top: 1.5rem;
 }
+
+
 .home-bold{
     position: relative;
     width: 200px;
@@ -351,7 +354,7 @@ position: absolute;
 }
 .home-info{
     display: grid;
-    row-gap: 2rem;
+    row-gap: 1rem;
 }
 .home-title{
     font-family: var(--body-font);
@@ -381,6 +384,8 @@ position: absolute;
     position: relative;
     top: 25rem;
     row-gap: 3.5rem;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid var(--text-color-light);
 }
 .skill-title{
     display: flex;
@@ -459,6 +464,7 @@ position: absolute;
 .qualification{
     position: relative;
     top:23rem;
+    border-bottom: 1px solid var(--text-color-light);
 }
 .section__title1{
    text-align: center;
@@ -503,20 +509,22 @@ position: absolute;
 }
 
 
-
 /*=============== SERVICES ===============*/
 .section__title4{
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 .services{
     position: relative;
-    top:20rem;
+    top:22rem;
+
 }
 .service-container{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--text-color-light);
 }
 .book {
     position: relative;
@@ -956,6 +964,7 @@ body .dark-theme {
         border-radius:10rem;
         place-items: center;
 
+
     }
     .home-profile{
         width: 280px;
@@ -996,7 +1005,7 @@ body .dark-theme {
         display: flex;
         justify-content: center;
         column-gap: 1.25rem;
-        padding: 0;
+        padding-left: 1rem;
     }
     .home-social-link{
         font-size: 1.25rem;
@@ -1008,14 +1017,15 @@ body .dark-theme {
     }
     .home-info{
         display: grid;
-        row-gap: 2rem;
+        row-gap: 1rem;
+
     }
     .home-title{
         font-family: var(--font-semi-bold);
         font-size: var(--normal-font-size);
         font-weight: 600;
         margin-top: 1.5rem;
-        text-align: center;
+
     }
     .home-description,
     .home-info-numbers{
@@ -1048,7 +1058,9 @@ body .dark-theme {
         display: none;
     }
     .home-container{
-        padding-bottom: 14rem;
+        padding-bottom: 10rem;
+        border-bottom: 1px solid var(--text-color-light);
+
     }
 
     .project-container {
@@ -1280,6 +1292,11 @@ body .dark-theme {
         top :12rem;
         color: var(--text-color-light);
 
+    }
+    .qualification{
+        position: relative;
+        top:2rem;
+        border-bottom: 1px solid var(--text-color-light);
     }
 
 }
