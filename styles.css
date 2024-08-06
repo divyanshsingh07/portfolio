@@ -889,11 +889,7 @@ position: absolute;
     column-gap: 1.5rem;
 
 }
-.services{
-    position: relative;
-    top:2rem;
 
-}
 .change-theme{
     font-size: 1.25rem;
     color: var(--title-color);
@@ -940,6 +936,11 @@ body .dark-theme {
 
 /* For medium devices */
 @media screen and (min-width: 1023px) {
+    .services{
+        position: relative;
+        top:2rem;
+
+    }
 
     .home-container{
         display: grid;
