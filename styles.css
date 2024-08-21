@@ -535,8 +535,7 @@ position: absolute;
     -webkit-box-shadow: 1px 1px 12px #000;
     box-shadow: 1px 1px 12px #000;
     -webkit-transform: preserve-3d;
-    -ms-transform: preserve-3d;
-    transform: preserve-3d;
+
     -webkit-perspective: 2000px;
     perspective: 2000px;
     display: -webkit-box;
@@ -588,11 +587,14 @@ position: absolute;
 }
 .book:hover .cover {
     -webkit-transition: all 0.8s;
-    transition: all.nav-close 0.8s;
     -webkit-transform: rotatey(-80deg);
     -ms-transform: rotatey(-80deg);
     transform: rotatey(-80deg);
 }
+.nav-close {
+    transition: all 0.8s;
+}
+
 .cover p{
     font-size: var(--font-medium);
 }
@@ -1312,7 +1314,7 @@ body .dark-theme {
     .section__title3 {
         text-align: center;
         margin-right: 17rem;
-        margin-top: 14rem;
+        margin-top: 1rem;
 
 
     }
