@@ -1281,7 +1281,7 @@ body .dark-theme {
 
     .nav-list {
         display: flex;
-        column-gap: 4rem;
+        column-gap: 2.5rem;
         font-size: var(--normal-font-size);
     }
 
